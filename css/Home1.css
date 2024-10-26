@@ -1,0 +1,170 @@
+/* General layout for the home page */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray-text: #5e5e5e;
+    --light-beige: #f2f0eb;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.home {
+    padding-top: 38px;
+    padding-bottom: 38px;
+    background-color: var(--light-beige);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.bubble-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 50px;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.rowhome {
+    display: flex;
+    gap: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rowhome li {
+    display: inline;
+}
+
+.rowhome li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.rowhome li a p {
+    font-size: 1.75rem; /* Adjusted size for the link text */
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+    font-style: italic; /* Italic style */
+    color: var(--black);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.rowhome li a:hover p {
+    color: var(--gray-text);
+}
+
+.columnwelcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome {
+    font-size: 40px; /* Changed font size to 40 */
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+    font-style: italic; /* Italic style */
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.echoesofart {
+    font-size: 4rem;
+    font-family: 'Prata', serif;
+    color: var(--black);
+    margin: 0;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Featured Art Section */
+.featuredart {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    width: 375px; /* Match the width of the frame */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.frame {
+    position: absolute;
+    top: 1;
+    left: 10;
+    width: 190%;
+    height: 130%;
+    z-index: 10;
+    pointer-events: none;
+    /* Adjust frame sizing to match the example shown */
+}
+
+.feature-text {
+    font-size: 1rem;
+    color: var(--gray-text);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Get Started Button */
+.get_started {
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.get_started:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
