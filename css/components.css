@@ -9,6 +9,12 @@
     font-size: 24px;
 }
 
+.ui.button.size-xs {
+    height: 68px;
+    padding-left: 34px;
+    padding-right: 34px;
+    font-size: 28px;
+}
 .ui.button.fill.white_a700 {
     background-color: var(--white_a700);
     box-shadow: var(--shadow-xs);

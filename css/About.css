@@ -1,0 +1,154 @@
+/* General layout for the home page */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray-text: #5e5e5e;
+    --light-beige: #f2f0eb;
+}
+
+
+/* Main container for the About Us section */
+.about-12 {
+    height: 1024px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--white);
+    background-image: url(../public/images/starryNight.jpg); /* Updated background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Row container */
+.row-2 {
+    margin-bottom: 108px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Navigation Bar styling with oval shape for About Us */
+.navbar-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px 50px; /* Adds padding to maintain oval shape */
+    border-radius: 50px; /* Creates an oval shape */
+    margin-bottom: 30px;
+    width: fit-content;
+    border: 1px solid var(--black);
+    margin: 0 auto;
+}
+
+/* Navigation menu items */
+.rowhome {
+    display: flex;
+    gap: 100px; /* Adjust spacing between items as needed */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rowhome li {
+    display: inline;
+}
+
+.rowhome li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.rowhome li a p {
+    font-size: 1.75rem; /* Adjusted size for the link text */
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+    font-style: italic; /* Italic style */
+    color: var(--black);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+
+.rowhome li a:hover p {
+    color: var(--gray-text);
+}
+
+/* About Us Title styling */
+.aboutus {
+    color: var(--black) !important;
+    font-family: 'Prata', sans-serif !important;
+    font-size: 100px;
+    font-weight: 400;
+    align-self: start;
+}
+
+@media only screen and (max-width: 1050px) {
+    .aboutus {
+        font-size: 48px;
+    }
+}
+
+/* Project summary text styling */
+.description-8 {
+    color: var(--black) !important;
+    margin-top: 52px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    width: 68%;
+    line-height: 24px;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 1050px) {
+    .description-8 {
+        width: 100%;
+    }
+}
+
+/* Row view styling for team members */
+.rowview {
+    margin-top: 32px;
+    gap: 48px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1050px) {
+    .rowview {
+        flex-direction: column;
+    }
+}
+
+/* Box for team member image */
+.view {
+    height: 330px;
+    background-color: var(--white);
+    width: 330px;
+}
+
+/* Team member description styling */
+.description-9 {
+    color: var(--black) !important;
+    font-size: 16px;
+    font-weight: 400;
+    width: 72%;
+    line-height: 24px;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 1050px) {
+    .description-9 {
+        width: 100%;
+    }
+}

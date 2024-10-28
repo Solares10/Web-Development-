@@ -8,8 +8,38 @@
   --radius-xs:34px;
  
 
-
-
-
-
 }
+
+.rowhome{
+  gap:88px;
+  display:flex;
+  flex-wrap:wrap;
+  @media only screen and (max-width: 1050px){
+    flex-direction:column;
+    gap: 20px;
+  }
+}
+
+.home-link{
+  font-style: italic;
+  @media only screen and (max-width:1050px){
+    font-size:26px;
+    @media only screen and (max-width:550px){
+      font-size:24px;
+    }
+  }
+}
+.about-link{
+  line-height:42px;
+  font-style: italic;
+  @media only screen and (max-width:1050px){
+    font-size:26px;
+    @media only screen and (max-width:550px){
+      font-size:24px;
+    }}}
+    .home-1{
+      color: var(--black_900)!important;
+      font-size:28px;
+      font-weight:400;
+
+    }
