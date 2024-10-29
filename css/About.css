@@ -3,7 +3,7 @@
     --white: #ffffff;
     --black: #000000;
     --gray-text: #5e5e5e;
-    --light-beige: #f2f0eb;
+    --light-beige: #f8f2e5;
 }
 
 
@@ -12,14 +12,15 @@
     height: 1024px;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: var(--white);
+    background-color: var(--light-beige);
     background-image: url(../public/images/starryNight.jpg); /* Updated background image */
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
 }
 
 /* Row container */
@@ -100,13 +101,15 @@
 /* Project summary text styling */
 .description-8 {
     color: var(--black) !important;
-    margin-top: 52px;
+    margin-top: 35px;
     text-align: center;
     font-size: 16px;
     font-weight: 400;
+    max-width: 800px;
     width: 68%;
     line-height: 24px;
     font-style: italic;
+    margin-right:auto;
 }
 
 @media only screen and (max-width: 1050px) {

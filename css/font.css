@@ -1,7 +1,7 @@
 @font-face {
     font-display: swap;
     font-style: normal;
-    src: url("../public/fonts/PoppinsItalic.ttf");
+    src: url("/fonts/PoppinsItalic.ttf");
     font-family: "Poppins";
     font-weight: 400;
 }
@@ -9,7 +9,7 @@
 @font-face {
     font-display: swap;
     font-style: normal;
-    src: url("../public/fonts/PrataRegular.ttf");
+    src: url("/fonts/PrataRegular.ttf");
     font-family: "Prata";
     font-weight: 400;
 }
