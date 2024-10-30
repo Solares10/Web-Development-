@@ -9,7 +9,12 @@
 
 
 const imagesArray = [
-    'Irises.jpg'
+    'tilledField.jpg',
+    'theScream.webp', 
+    'theBlueRider.webp',
+    'sunrise.jpg',
+    'persistenceOfMemory.jpg',
+    'danceAtLeMoulin.jpg'
 ];
 
 function getRandomImage(){
@@ -19,4 +24,7 @@ function getRandomImage(){
 }
 
 // Set the function to run when the page loads
-window.onload = getRandomImage;
+window.onload = function() {
+    getRandomImage();
+    setInterval(getRandomImage, 5000);
+}
