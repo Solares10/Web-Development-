@@ -1,0 +1,110 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray-text: #5e5e5e;
+    --light-beige: #f8f2e5;
+}
+
+/* Main container for the Artists section */
+.artist {
+    height: 1024px;
+    padding: 40px 20px;
+    background-color: var(--light-beige);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar styling with oval shape */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px 40px;
+    border-radius: 50px; /* Oval shape */
+    margin: 0 auto 30px;
+    width: fit-content;
+    border: 1px solid var(--black);
+}
+
+/* Navigation menu items */
+.rowhome {
+    display: flex;
+    gap: 40px; /* Spacing between menu items */
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.rowhome li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    padding: 10px 20px; /* Add padding around each link */
+    border-radius: 25px; /* Rounded corners for each link */
+    transition: color 0.3s ease;
+}
+
+.rowhome li a:hover {
+    color: var(--gray-text);
+    background-color: var(--light-beige); /* Highlight effect on hover */
+}
+
+/* Artists Section Styling */
+.row_one {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.artist-card {
+    max-width: 500px;
+    flex: 1;
+}
+
+.artist-card h2 {
+    font-family: 'Prata', serif;
+    font-size: 2.5rem;
+    color: var(--black);
+    margin: 0 0 10px;
+}
+
+.artist-card p {
+    color: var(--gray-text);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.image-placeholder {
+    width: 330px;
+    height: 330px;
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1050px) {
+    .row_one {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artist-card {
+        align-items: center;
+        text-align: center;
+    }
+
+    .rowhome {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
