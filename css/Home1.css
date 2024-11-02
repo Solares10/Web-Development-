@@ -124,7 +124,7 @@ body {
 .image-container {
     position: relative;
     width: 300px; /* Match the width of the frame */
-    height: auto;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
