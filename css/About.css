@@ -1,15 +1,33 @@
 /* General layout for the home page */
-:root {
+/* :root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray-text: #5e5e5e;
+    --light-beige: #f8f2e5;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
     --white: #ffffff;
     --black: #000000;
     --gray-text: #5e5e5e;
     --light-beige: #f8f2e5;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 /* Main container for the About Us section */
 .about-12 {
-    height: 1024px;
+    /* height: 1024px; */
     padding-top: 38px;
     padding-bottom: 38px;
     background-color: var(--light-beige);
@@ -17,16 +35,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 110%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 
 /* Row container */
 .row-2 {
-    margin-bottom: 108px;
+    /* margin-top: 108px; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -84,6 +102,8 @@
     color: var(--gray-text);
 }
 
+
+
 /* About Us Title styling */
 .aboutus {
     color: var(--black) !important;
@@ -92,31 +112,34 @@
     font-weight: 400;
     align-self: start;
     margin-bottom:0px;
+    text-align: center;
+    margin-top: 20px;
 
 
 @media only screen and (max-width: 1050px) {
     .aboutus {
         font-size: 48px;
     }}}
+    
 /* Project summary text styling */
 .description-8 {
     color: var(--black) !important;
     margin-top: 20px;
     text-align: center;
-    margin-left: 8rem;;
+    /* margin-left: 8rem;; */
     font-size: 16px;
     font-weight: 400;
-    max-width: 800px;
-    width: 68%;
+    /* max-width: 800px; */
+    /* width: 68%; */
     line-height: 24px;
     font-style: italic;
-    margin-right:auto;
-
+    /* margin-right:auto; */
+}
 @media only screen and (max-width: 1050px) {
     .description-8 {
         width: 100%;
-    }
-}}
+    } 
+}
 
 /* Row view styling for team members */
 .rowview {
@@ -133,12 +156,24 @@
     }
 }}
 
-/* Box for team member image */
-.view {
-    height: 330px;
-    background-color: var(--white);
-    width: 330px;
+.members-column1 {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px;
 }
 
+.member {
+    flex-basis: calc(33.33% - 30px); 
+    /* box-sizing: border-box; */
+}
+
+.member img {
+    width: 150px; /* Set your desired width */
+    height: 150px; /* Set your desired height */
+    object-fit: cover; /* Ensures the image covers the dimensions while preserving aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
 
     
