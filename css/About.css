@@ -23,6 +23,7 @@
     align-items: center;
 }
 
+
 /* Row container */
 .row-2 {
     margin-bottom: 108px;
@@ -90,6 +91,7 @@
     font-size: 100px;
     font-weight: 400;
     align-self: start;
+    margin-bottom:0px;
 
 
 @media only screen and (max-width: 1050px) {
@@ -99,8 +101,9 @@
 /* Project summary text styling */
 .description-8 {
     color: var(--black) !important;
-    margin-top: 35px;
+    margin-top: 20px;
     text-align: center;
+    margin-left: 8rem;;
     font-size: 16px;
     font-weight: 400;
     max-width: 800px;
