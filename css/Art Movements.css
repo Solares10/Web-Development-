@@ -69,26 +69,22 @@
 /* Row container for artist blocks */
 .row {
     display: flex;
-    flex-direction: column;
-    gap: 72px;
+    flex-direction: row; /* Change to row for side-by-side blocks */
+    gap: 40px; /* Gap between blocks */
     width: 100%;
     max-width: 1230px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Styling for each artist block with alternating layouts */
+/* Styling for each artist block */
 .art-block {
     display: flex;
-    gap: 40px;
+    gap: 20px; /* Adjust gap as needed */
     align-items: flex-start;
     width: 100%;
+    max-width: 600px; /* Limit the width of each block */
     padding: 20px 0;
-}
-
-/* Alternate layout for the art blocks to position image and text */
-.art-block:nth-child(even) {
-    flex-direction: row-reverse;
 }
 
 /* Artist name styling */
