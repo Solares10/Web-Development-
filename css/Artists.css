@@ -6,143 +6,118 @@
     --light-beige: #f8f2e5;
 }
 
-
-/* Main container for the About Us section */
-.artists{
+/* Main container for the Artists section */
+.artists {
     height: 1024px;
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: var(--light-beige);
-    background-image: url(); /* Updated background image */
+    background-image: url('img_home.png'); /* Updated background image */
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 110%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-/* Row container */
-.row_one {
-    margin-bottom: 72px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    max-width: 1230px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-
-/* Navigation Bar styling with oval shape for About Us */
-.columnhome{
-    gap:24px;
-    display:flex;
-    width:100%;
-    flex-direction:column;
-    align-items:center;
-.navbar-8 {
+/* Navigation Bar styling with oval shape */
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--white);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 12px 50px; /* Adds padding to maintain oval shape */
-    border-radius: 50px; /* Creates an oval shape */
+    padding: 12px 50px;
+    border-radius: 50px;
+    border: 1px solid var(--black);
     margin-bottom: 30px;
     width: fit-content;
-    border: 1px solid var(--black);
-    margin: 0 auto;
 }
 
 /* Navigation menu items */
-.rowhome {
+.nav-menu {
     display: flex;
-    gap: 100px; /* Adjust spacing between items as needed */
-    list-style: none;
+    gap: 88px;
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.rowhome li {
-    display: inline;
-}
-
-.rowhome li a {
+.nav-menu li a {
     text-decoration: none;
     color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
-.rowhome li a p {
-    font-size: 1.75rem; /* Adjusted size for the link text */
-    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
-    font-style: italic; /* Italic style */
+/* Section title styling */
+.section-title {
+    font-family: 'Prata', serif;
+    font-size: 48px;
     color: var(--black);
-    margin: 0;
-    transition: color 0.3s ease;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+    max-width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
 }
 
-
-.rowhome li a:hover p {
-    color: var(--gray-text);
-}
-
-/* About Us Title styling */
-.aboutus {
-    color: var(--black) !important;
-    font-family: 'Prata', sans-serif !important;
-    font-size: 100px;
-    font-weight: 400;
-    align-self: start;
-
-
-@media only screen and (max-width: 1050px) {
-    .aboutus {
-        font-size: 48px;
-    }}}
-/* Project summary text styling */
-.description-8 {
-    color: var(--black) !important;
-    margin-top: 35px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    max-width: 800px;
-    width: 68%;
-    line-height: 24px;
-    font-style: italic;
-    margin-right:auto;
-
-@media only screen and (max-width: 1050px) {
-    .description-8 {
-        width: 100%;
-    }
-}}
-
-/* Row view styling for team members */
-.rowview {
-    margin-top: 32px;
-    gap: 48px;
+/* Row container for artist descriptions */
+.row_one {
     display: flex;
-    align-self: stretch;
-    align-items: center;
+    justify-content: flex-start;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
 
+/* Row container for artist blocks */
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-@media only screen and (max-width: 1050px) {
-    .rowview {
-        flex-direction: column;
-    }
-}}
+/* Styling for each artist block */
+.artist-block {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    align-items: flex-start;
+    padding: 20px 0; /* Adjusted spacing */
+}
 
-/* Box for team member image */
+/* Artist name styling */
+.artist-name {
+    font-family: 'Prata', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+/* Text box styling */
+.text-box {
+    flex: 1;
+    font-size: 14px;
+    color: var(--gray-text);
+    line-height: 24px;
+    padding-right: 20px; /* Adjusted padding for text alignment */
+}
+
+/* Image box styling */
 .view {
     height: 330px;
-    background-color: var(--white);
     width: 330px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-text);
+    flex-shrink: 0;
 }
-
-
-    
