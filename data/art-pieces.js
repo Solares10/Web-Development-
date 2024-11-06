@@ -29,7 +29,7 @@ let data =  { "artPieces": [
 	  "timePeriod": "1931",
 	  "description": "A surreal landscape filled with melting clocks symbolizing the fluidity of time.",
 	  "currentLocation": "Museum of Modern Art, New York",
-	  "photoURL": ""
+	  "photoURL": "https://upload.wikimedia.org/wikipedia/en/d/dd/The_Persistence_of_Memory.jpg"
 	},
 	{
 	  "artID": 4,
@@ -49,7 +49,7 @@ let data =  { "artPieces": [
 	  "timePeriod": "1937",
 	  "description": "A powerful anti-war painting depicting the horrors of the Spanish Civil War.",
 	  "currentLocation": "Museo Reina Sofia, Madrid",
-	  "photoURL": ""
+	  "photoURL": "https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg"
 	},
 	{
 	  "artID": 6,
@@ -89,7 +89,7 @@ let data =  { "artPieces": [
 	  "timePeriod": "1930",
 	  "description": "A classic painting of rural American life featuring a stern-looking farmer and his daughter.",
 	  "currentLocation": "Art Institute of Chicago, Chicago",
-	  "photoURL": ""
+	  "photoURL": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg"
 	},
 	{
 	  "artID": 10,
@@ -99,7 +99,7 @@ let data =  { "artPieces": [
 	  "timePeriod": "1512",
 	  "description": "Part of the Sistine Chapel ceiling frescoes, depicting the biblical creation of man.",
 	  "currentLocation": "Sistine Chapel, Vatican City",
-	  "photoURL": ""
+	  "photoURL": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg"
 	}
   ]
 }
@@ -113,19 +113,11 @@ function displayArtPiece() {
     // Use a default image if photoURL is empty or invalid
     if (featuredArt.photoURL) {
         imageElement.src = featuredArt.photoURL;
-    } else {
-        imageElement.src = './images/default-image.jpg'; // Ensure this path is correct
-    }
+    } 
 
-    // Optionally, you can display other information about the art piece
-    const titleElement = document.getElementById("artTitle");
-    titleElement.innerText = featuredArt.artName;
-
-    const descriptionElement = document.getElementById("artDescription");
-    descriptionElement.innerText = featuredArt.description;
 }
 
 window.onload = function() {
     displayArtPiece();
-    setInterval(displayArtPiece, 60000); // Update every 1 minute
+    setInterval(displayArtPiece, 5000); // Update every 1 minute
 }
