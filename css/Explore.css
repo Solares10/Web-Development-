@@ -1,141 +1,92 @@
-/* General layout for the home page */
 :root {
     --white: #ffffff;
     --black: #000000;
     --gray-text: #5e5e5e;
     --light-beige: #f8f2e5;
+    --shadow-xs: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+body {
+    margin: 0;
+    padding-top: 100px; /* Space for fixed navbar */
+    font-family: 'Poppins', sans-serif;
+}
 
-/* Main container for the About Us section */
-.about-12 {
+.stackviveschickentwo-one {
     height: 1024px;
-    padding-top: 38px;
-    padding-bottom: 38px;
     background-color: var(--light-beige);
-    background-image: url(../public/images/starryNight.jpg); /* Updated background image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 110%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Row container */
-.row-2 {
-    margin-bottom: 108px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    max-width: 1230px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    position: relative;
+    align-content: flex-end;
+    padding: 44px 116px;
 }
 
-/* Navigation Bar styling with oval shape for About Us */
-.navbar-8 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--white);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 12px 50px; /* Adds padding to maintain oval shape */
-    border-radius: 50px; /* Creates an oval shape */
-    margin-bottom: 30px;
-    width: fit-content;
-    border: 1px solid var(--black);
-    margin: 0 auto;
+    box-shadow: var(--shadow-xs);
+    padding: 12px 40px; /* Extra padding for oval shape */
+    border-radius: 30px; /* Oval shape */
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    z-index: 10;
+    max-width: 90%;
 }
 
-/* Navigation menu items */
-.rowhome {
-    display: flex;
-    gap: 100px; /* Adjust spacing between items as needed */
+.navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 24px;
 }
 
-.rowhome li {
+.navbar ul li {
     display: inline;
 }
 
-.rowhome li a {
+.navbar ul li a {
     text-decoration: none;
     color: var(--black);
+    font-weight: 700;
+    font-size: 1rem;
 }
 
-.rowhome li a p {
-    font-size: 1.75rem; /* Adjusted size for the link text */
-    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
-    font-style: italic; /* Italic style */
-    color: var(--black);
-    margin: 0;
-    transition: color 0.3s ease;
+.rowpngtreevinta {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: max-content;
+    max-width: 1208px;
+    margin: auto;
 }
 
+.columnhome {
+    margin-left: -528px;
+    gap: 66px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.rowhome li a:hover p {
+.columndescripti {
+    background-color: var(--white);
+    width: 42%;
+    padding: 48px 26px;
+}
+
+.description {
+    margin-top: 6px;
+    line-height: 1.5em;
     color: var(--gray-text);
 }
-
-/* About Us Title styling */
-.aboutus {
-    color: var(--black) !important;
-    font-family: 'Prata', sans-serif !important;
-    font-size: 100px;
-    font-weight: 400;
-    align-self: start;
-
-
-@media only screen and (max-width: 1050px) {
-    .aboutus {
-        font-size: 48px;
-    }}}
-/* Project summary text styling */
-.description-8 {
-    color: var(--black) !important;
-    margin-top: 35px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    max-width: 800px;
-    width: 68%;
-    line-height: 24px;
-    font-style: italic;
-    margin-right:auto;
-
-@media only screen and (max-width: 1050px) {
-    .description-8 {
-        width: 100%;
-    }
-}}
-
-/* Row view styling for team members */
-.rowview {
-    margin-top: 32px;
-    gap: 48px;
-    display: flex;
-    align-self: stretch;
-    align-items: center;
-
-
-@media only screen and (max-width: 1050px) {
-    .rowview {
-        flex-direction: column;
-    }
-}}
-
-/* Box for team member image */
-.view {
-    height: 330px;
-    background-color: var(--white);
-    width: 330px;
-}
-
-
-    
