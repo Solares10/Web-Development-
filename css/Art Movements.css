@@ -5,57 +5,89 @@
     --light-beige: #f8f2e5;
 }
 
+.body{
+    width: 110%;
+}
 /* Main container for the Artists section */
 .Art-Movements {
-    height: 1024px;
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: var(--light-beige);
-    background-image: url('img_home.png'); /* Updated background image */
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1400px;
     margin: 0 auto;
+    background-size: repeat;
 }
 
+
 /* Navigation Bar styling with oval shape */
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar */
 .navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: var(--white);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 12px 50px; /* Adds padding to maintain oval shape */
-    border-radius: 50px; /* Creates an oval shape */
-    margin-bottom: 30px;
-    width: fit-content;
-    border: 1px solid var(--black);
-    margin: 0 auto;
+    width: 100%;
+    padding: 12px 50px;;
+    align-content: center;
+    font-family: 'Poppins-Italic', sans-serif;
 }
 
-/* Navigation menu items */
-.nav-menu {
+.bubble-container {
     display: flex;
-    gap: 100px; /* Adjust spacing between items as needed */
+    justify-content: center;
+    padding: 12px 50px;;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.rowhome {
+    display: flex;
+    gap: 100px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.nav-menu li a {
+.rowhome li {
     display: inline;
+}
+
+.rowhome li a {
     text-decoration: none;
     color: var(--black);
 }
 
+.rowhome li a p {
+    font-size: 1.75rem; /* Adjusted size for the link text */
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+    font-style: italic; /* Italic style */
+    color: var(--black);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.rowhome li a:hover p {
+    color: var(--gray-text);
+}
+
+
 /* Section title styling */
 .section-title {
     font-family: 'Prata', serif;
-    font-size: 48px;
+    font-size: 100px;
+    font-weight: 400;
     color: var(--black);
     margin-bottom: 40px;
     text-align: left;
@@ -63,14 +95,24 @@
     max-width: 1230px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
+    padding-left: 10px;
+}
+
+/* Row container for artist descriptions */
+.row_one {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
 }
 
 /* Row container for artist blocks */
 .row {
     display: flex;
-    flex-direction: row; /* Change to row for side-by-side blocks */
-    gap: 40px; /* Gap between blocks */
+    flex-direction: column;
+    gap: 72px;
     width: 100%;
     max-width: 1230px;
     margin: 0 auto;
@@ -78,17 +120,16 @@
 }
 
 /* Styling for each artist block */
-.art-block {
+.artist-block {
     display: flex;
-    gap: 20px; /* Adjust gap as needed */
-    align-items: flex-start;
+    gap: 40px;
     width: 100%;
-    max-width: 600px; /* Limit the width of each block */
-    padding: 20px 0;
+    align-items: flex-start;
+    padding: 20px 0; /* Adjusted spacing */
 }
 
 /* Artist name styling */
-.Art-Movement {
+.artist-name {
     font-family: 'Prata', serif;
     font-size: 24px;
     font-weight: bold;
@@ -102,20 +143,36 @@
     font-size: 14px;
     color: var(--gray-text);
     line-height: 24px;
-    padding-right: 20px;
-    max-width: 600px; /* Limit text width for better alignment */
+    padding-right: 20px; /* Adjusted padding for text alignment */
 }
 
-/* Image box styling for the white square */
+/* Image box styling */
 .view {
     height: 330px;
     width: 330px;
     background-color: var(--white);
     border: 1px solid var(--gray-text);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
 }
+
+
+@font-face {
+    font-family: 'Prata'; 
+    src: url('../public/fonts/Prata-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins-Italic'; 
+    src: url('../public/fonts/Poppins-Italic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins-BoldItalic'; 
+    src: url('/public/fonts/Poppins-BoldItalic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
