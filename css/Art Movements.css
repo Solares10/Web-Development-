@@ -119,6 +119,7 @@
     padding: 0 20px;
 }
 
+
 /* Styling for each artist block */
 .artist-block {
     display: flex;
@@ -126,6 +127,12 @@
     width: 100%;
     align-items: flex-start;
     padding: 20px 0; /* Adjusted spacing */
+    flex-direction: row; /* Default direction for image on right */
+}
+
+/* Reverse layout for every second artist block (image on the left) */
+.artist-block:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 /* Artist name styling */
@@ -140,10 +147,10 @@
 /* Text box styling */
 .text-box {
     flex: 1;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--gray-text);
     line-height: 24px;
-    padding-right: 20px; /* Adjusted padding for text alignment */
+    padding: 0 20px; /* Adjusted padding for text alignment */
 }
 
 /* Image box styling */
@@ -153,8 +160,24 @@
     background-color: var(--white);
     border: 1px solid var(--gray-text);
     flex-shrink: 0;
+    flex-grow: 0; 
+    display: flex; 
+    justify-content: center; /* Centers image horizontally */
+    align-items: center; /* Centers image vertically */
+    margin: 0; 
 }
 
+/* Image inside the view container */
+.view img {
+    width: 100%; /* Ensures the image scales to the container width */
+    height: 100%; /* Makes the image fill the height of the container */
+    object-fit: cover; /* preventing distorting */
+}
+
+/* Hide the .view container if there is no image */
+.view:empty {
+    display: none;
+}
 
 @font-face {
     font-family: 'Prata'; 
