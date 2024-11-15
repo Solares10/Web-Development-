@@ -1,0 +1,127 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray-text: #5e5e5e;
+    --light-beige: #f8f2e5;
+}
+
+/* Body styling */
+body {
+    margin: 0;
+    padding-top: 100px; /* Space for fixed navbar */
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-beige);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Flex container for image and text side-by-side */
+.rowpngtreevinta {
+    display: flex;
+    max-width: 1208px;
+    width: 100%;
+    gap: 40px;
+    align-items: center; /* Align the content vertically */
+    justify-content: space-between; /* Distribute space evenly between items */
+}
+
+/* Image section styling */
+.columnhome {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columnhome img {
+    width: 100%; /* Ensure the image takes up full width of its container */
+    max-width: 500px; /* Limit the max width of the image */
+    height: auto;
+}
+
+/* Text and button container styling */
+.columndescripti {
+    flex: 1;
+    background-color: var(--white);
+    padding: 48px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px; /* Limit the width of the description box */
+}
+
+/* Text styling */
+.description {
+    margin-top: 6px;
+    line-height: 1.5em;
+    color: var(--gray-text);
+}
+
+.back-button {
+    position: relative; /* Stay within content and scroll with the page */
+    margin-top: 20px; /* Space from the content above */
+    width: auto; /* Set to auto to adjust the width based on content */
+    max-width: 200px; /* Limit the width to make it smaller */
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--black);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
+}
+
+
+
+/* Main container styling */
+.stackviveschickentwo-one {
+    flex-grow: 1;
+    background-color: var(--light-beige);
+    width: 100%;
+    padding: 44px 116px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px; /* Add padding at the bottom to ensure button isn't hidden */
+}
+
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px 50px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    width: fit-content;
+    border: 1px solid var(--black);
+    margin: 0 auto;
+}
+
+/* Navbar list styling */
+.navbar ul {
+    display: flex;
+    gap: 100px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar link styling */
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+

@@ -5,14 +5,14 @@
     <title>Echoes of Art</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/Explore.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/Explore3.css"/>
 </head>
 <body>
     <header class="navbar">
         <ul>
             <li><a href="Home1.html">Home</a></li>
             <li><a href="About.html">About</a></li>
-            <li><a href="Explore.html">Explore</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
             <li><a href="Art Movements.html">Art Movements</a></li>
             <li><a href="Artists.html">Artists</a></li>
         </ul>
@@ -40,14 +40,13 @@
     </div>
 
     <!-- Back button at the bottom of the page -->
-    <button class="back-button" onclick="goBack()">Back</button>
+<button class="back-button" onclick="goBack()">Back</button>
 
-    <script>
-        // Function to go back to the previous page
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+<script>
+    // Function to go to the gallery page
+    function goBack() {
+        window.location.href = "Gallery.html";  // Replace with your gallery page URL
+    }
+</script>
 </body>
 </html>
-
