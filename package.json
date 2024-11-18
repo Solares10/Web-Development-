@@ -1,0 +1,16 @@
+{
+  "name": "webdev_slp2024",
+  "version": "1.0.0",
+  "description": "**Team:** Web Development  \r **Project Name:** Echoes of Art  \r **Team Lead:** Julia Chaidez \r **Team Members:** Melissa Gio , Michelle Solares , Mayela Ancheta, Shawn Terrado, Katelyn Mijares, Roshan Karimi",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
