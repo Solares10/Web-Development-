@@ -1,5 +1,7 @@
 // data for art pieces
 
+const exp = require("constants");
+
 let data =  { "artPieces": [
 	{
 	  "artID": 1,
@@ -104,20 +106,28 @@ let data =  { "artPieces": [
   ]
 }
 
-function displayArtPiece() {
-    const featuredArtIndex = Math.floor(Math.random() * data.artPieces.length);
-    const featuredArt = data.artPieces[featuredArtIndex];
+function displayArtPiece(mockArtPiece = null) {
+    const featuredArt = mockArtPiece || data.artPieces[Math.floor(Math.random() * data.artPieces.length)];
+	const imageElement = document.getElementById("imageShower");
 
-    const imageElement = document.getElementById("imageShower");
-
-    // Use a default image if photoURL is empty or invalid
-    if (featuredArt.photoURL) {
-        imageElement.src = featuredArt.photoURL;
-    } 
-
+	//does the photoURl consist of only whitespace or empty?
+	if (featuredArt.photoURL && featuredArt.photoURL.trim() != "") {
+		imageElement.src = featuredArt.photoURL;
+	} else {
+		imageElement.src = "http://localhost/default-image.jpg";
+	}
 }
 
-window.onload = function() {
-    displayArtPiece();
-    setInterval(displayArtPiece, 5000); // Update every 1 minute
+function initialize() {
+	displayArtPiece();
+	return setInterval(displayArtPiece, 5000); //update every 5 seconds
 }
+
+window.onload = initialize;
+
+module.exports = {
+	data,
+	displayArtPiece,
+	initialize
+};
+
