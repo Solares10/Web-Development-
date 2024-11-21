@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/Explore5.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css"/>
 </head>
 <body>
-    <header class="navbar">
-        <ul>
-            <li><a href="Home1.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Detail.html">Detail</a></li>
-            <li><a href="Art Movements.html">Art Movements</a></li>
-            <li><a href="Artists.html">Artists</a></li>
-        </ul>
-    </header>
+    <div id="navbar-container"></div>
+    <script>
+        // Load the navbar into the container
+        fetch('navbar.html')  
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data);
+    </script>
 
     <div class="stackviveschickentwo-one">
         <div class="rowpngtreevinta">
             <!-- Image on the left -->
             <div class="columnhome">
-                <img src="public/images/img_starry_night_image.png" class="pngtreevintage" alt="Art Piece">
+                <img src="public/images/img_guernica.png" class="pngtreevintage" alt="Art Piece">
             </div>
 
             <!-- Text on the right -->
@@ -45,7 +44,7 @@
 <script>
     // Function to go to the gallery page
     function goBack() {
-        window.location.href = "Gallery.html";  // Replace with your gallery page URL
+        window.location.href = "Explore.html";  // Replace with your gallery page URL
     }
 </script>
 </body>
