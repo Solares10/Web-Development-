@@ -6,16 +6,26 @@
     --light-beige: #f8f2e5;
 }
 
+.body{
+    width: 110%;
+}
+
 /* Main container for the Artists section */
 .artists {
-    height: 1024px;
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: var(--light-beige);
-    background-image: url('img_home.png'); /* Updated background image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 110%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-size: repeat;
+}
+
+/* Navigation Bar styling with oval shape */
+.column {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,36 +35,61 @@
 .navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: var(--white);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 12px 50px;
-    border-radius: 50px;
+    width: 100%;
+    align-content: center;
+    font-family: 'Poppins-Italic', sans-serif;
+}
+
+.bubble-container {
+    display: flex;
+    justify-content: center;
+    padding: 12px 50px;
+    background-color: var(--white);
     border: 1px solid var(--black);
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     width: fit-content;
 }
 
 /* Navigation menu items */
-.nav-menu {
+.rowhome {
     display: flex;
-    gap: 88px;
-    list-style-type: none;
+    gap: 100px;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.nav-menu li a {
+.rowhome li {
+    display: inline;
+}
+
+.rowhome li a {
     text-decoration: none;
     color: var(--black);
+}
+
+.rowhome li a p {
+    font-size: 1.75rem; 
+    color: var(--black);
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-style: italic;
+    transition: color 0.3s ease;
+    margin: 0;
+    
+}
+
+.rowhome li a p:hover {
+    color: var(--gray-text); 
 }
 
 /* Section title styling */
 .section-title {
     font-family: 'Prata', serif;
-    font-size: 48px;
+    font-size: 100px;
+    font-weight: 400;
     color: var(--black);
     margin-bottom: 40px;
     text-align: left;
@@ -62,7 +97,8 @@
     max-width: 1230px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
+    padding-left: 10px;
+
 }
 
 /* Row container for artist descriptions */
@@ -92,7 +128,13 @@
     gap: 40px;
     width: 100%;
     align-items: flex-start;
-    padding: 20px 0; /* Adjusted spacing */
+    padding: 20px 0; 
+    flex-direction: row; 
+}
+
+/* Reverse layout for every second artist block (image on the left) */
+.artist-block:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 /* Artist name styling */
@@ -110,7 +152,7 @@
     font-size: 14px;
     color: var(--gray-text);
     line-height: 24px;
-    padding-right: 20px; /* Adjusted padding for text alignment */
+    padding-right: 20px; 
 }
 
 /* Image box styling */
@@ -120,4 +162,43 @@
     background-color: var(--white);
     border: 1px solid var(--gray-text);
     flex-shrink: 0;
+    flex-grow: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
 }
+
+
+/* Image inside the view container */
+.view img {
+    width: 100%; /* Ensures the image scales to the container width */
+    height: 100%; /* Makes the image fill the height of the container */
+    object-fit: cover; /* preventing distorting */
+}
+
+/* Hide the .view container if there is no image */
+.view:empty {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Prata'; 
+    src: url('../public/fonts/Prata-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins-Italic'; 
+    src: url('../public/fonts/Poppins-Italic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins-BoldItalic'; 
+    src: url('/public/fonts/Poppins-BoldItalic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
