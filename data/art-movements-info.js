@@ -1,1 +1,0 @@
-// data for art movement information
