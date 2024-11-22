@@ -44,8 +44,8 @@ body {
 /* Text and button container styling */
 .columndescripti {
     flex: 1;
-    background-color: var(--white);
-    padding: 48px 26px;
+    background-color: none;
+    padding: 10px 26px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -56,6 +56,10 @@ body {
 .description {
     margin-top: 6px;
     line-height: 1.5em;
+    color: var(--gray-text);
+}
+
+.location{
     color: var(--gray-text);
 }
 
@@ -88,7 +92,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 60px; /* Add padding at the bottom to ensure button isn't hidden */
+    padding-bottom: 30px; /* Add padding at the bottom to ensure button isn't hidden */
 }
 
 

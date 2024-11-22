@@ -44,7 +44,7 @@ body {
 /* Text and button container styling */
 .columndescripti {
     flex: 1;
-    background-color: var(--white);
+    background-color: none;
     padding: 48px 26px;
     display: flex;
     flex-direction: column;

@@ -185,7 +185,6 @@ body {
     width:100%;
 }
 
-
 .view img {
     width: 100%; 
     max-width: 280px; 
@@ -193,7 +192,8 @@ body {
     margin: auto; 
     display: block; 
     align-self:center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    object-fit: cover;
 }
 
 .view img:hover {
@@ -202,7 +202,27 @@ body {
 }
 
 .view {
-    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+}
+
+.view frame2::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/Images/img_frame.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
 }
 
 .artist-block {
