@@ -6,8 +6,9 @@
     --light-beige: #f8f2e5;
 }
 
-.body{
-    width: 110%;
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
 /* Main container for the Artists section */

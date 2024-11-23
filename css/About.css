@@ -1,11 +1,3 @@
-/* General layout for the home page */
-/* :root {
-    --white: #ffffff;
-    --black: #000000;
-    --gray-text: #5e5e5e;
-    --light-beige: #f8f2e5;
-} */
-
 * {
     margin: 0;
     padding: 0;
@@ -19,61 +11,50 @@ html, body {
     height: 100%;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Main container for the About Us section */
-.about-12 {
-    /* height: 1024px; */
-    padding-top: 38px;
-    padding-bottom: 38px;
+/* Main container for the Artists section */
+.About-Page {
+    padding-top: 40px;
+    padding-bottom: 40px;
     background-color: var(--light-beige);
-    background-image: url(../public/images/starryNight.jpg); /* Updated background image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 110%;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-}
-
-
-/* Row container */
-.row-2 {
-    /* margin-top: 108px; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    max-width: 1230px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-/* Navigation Bar styling with oval shape for About Us */
-.navbar-8 {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: var(--white);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 12px 50px; /* Adds padding to maintain oval shape */
-    border-radius: 50px; /* Creates an oval shape */
-    margin-bottom: 30px;
-    width: fit-content;
-    border: 1px solid var(--black);
+    width: 100%;
     margin: 0 auto;
 }
 
-/* Navigation menu items */
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 50px;
+    align-content: center;
+    font-family: 'Poppins-Italic', sans-serif;
+}
+
+.bubble-container {
+    display: flex;
+    justify-content: center;
+    padding: 12px 50px;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
 .rowhome {
     display: flex;
-    gap: 100px; /* Adjust spacing between items as needed */
+    gap: 100px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -97,83 +78,88 @@ body {
     transition: color 0.3s ease;
 }
 
-
 .rowhome li a:hover p {
     color: var(--gray-text);
 }
 
-
-
-/* About Us Title styling */
-.aboutus {
-    color: var(--black) !important;
-    font-family: 'Prata', sans-serif !important;
+/* Section title styling */
+.section-title {
+    font-family: 'Prata', serif;
     font-size: 100px;
     font-weight: 400;
-    align-self: start;
-    margin-bottom:0px;
-    text-align: center;
-    margin-top: 20px;
-
-
-@media only screen and (max-width: 1050px) {
-    .aboutus {
-        font-size: 48px;
-    }}}
-    
-/* Project summary text styling */
-.description-8 {
-    color: var(--black) !important;
-    margin-top: 20px;
-    text-align: center;
-    /* margin-left: 8rem;; */
-    font-size: 16px;
-    font-weight: 400;
-    /* max-width: 800px; */
-    /* width: 68%; */
-    line-height: 24px;
-    font-style: italic;
-    /* margin-right:auto; */
-}
-@media only screen and (max-width: 1050px) {
-    .description-8 {
-        width: 100%;
-    } 
+    color: var(--black);
+    margin-top: 83px;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+    max-width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
 }
 
-/* Row view styling for team members */
-.rowview {
-    margin-top: 32px;
-    gap: 48px;
-    display: flex;
-    align-self: stretch;
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    row-gap: 100px; /* Space between rows */
+    column-gap: 40px; /* Space between columns */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px; /* Adjust based on your page's width */
+}
+
+.team-member {
+    text-align: center;
+}
+
+.artist-name {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.role {
+    font-size: 20px;
+}
+
+.team-member img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+
+    row-gap: 20px;
+
+    height: 330px;
+    width: 330px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-text);
+    flex-shrink: 0;
+    flex-grow: 0; 
+    display: flex; 
+    justify-content: center; 
     align-items: center;
-
-
-@media only screen and (max-width: 1050px) {
-    .rowview {
-        flex-direction: column;
-    }
-}}
-
-.members-column1 {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 50px;
+    margin: 0; 
 }
 
-.member {
-    flex-basis: calc(33.33% - 30px); 
-    /* box-sizing: border-box; */
-}
+@font-face {
+    font-family: 'Prata'; 
+    src: url('../public/fonts/Prata-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
 
-.member img {
-    width: 150px; /* Set your desired width */
-    height: 150px; /* Set your desired height */
-    object-fit: cover; /* Ensures the image covers the dimensions while preserving aspect ratio */
-    border-radius: 8px; /* Optional: Adds rounded corners */
-}
+  @font-face {
+    font-family: 'Poppins-Italic'; 
+    src: url('../public/fonts/Poppins-Italic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
 
-    
+  @font-face {
+    font-family: 'Poppins-BoldItalic'; 
+    src: url('/public/fonts/Poppins-BoldItalic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }

@@ -5,9 +5,11 @@
     --light-beige: #f8f2e5;
 }
 
-.body{
-    width: 110%;
+html, body {
+    height: 100%;
+    margin: 0;
 }
+
 /* Main container for the Artists section */
 .Art-Movements {
     padding-top: 40px;
@@ -35,7 +37,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 12px 50px;;
+    padding: 12px 50px;
     align-content: center;
     font-family: 'Poppins-Italic', sans-serif;
 }
@@ -43,7 +45,7 @@
 .bubble-container {
     display: flex;
     justify-content: center;
-    padding: 12px 50px;;
+    padding: 12px 50px;
     background-color: var(--white);
     border: 1px solid var(--black);
     border-radius: 50px;
