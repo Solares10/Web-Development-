@@ -27,6 +27,14 @@
                 </div>
             </header>
 
+            <button id="viewToggleButton" class="toggle-button">Switch to Detail View</button>
+
+            <script>
+                document.getElementById('viewToggleButton').addEventListener('click', function () {
+                    window.location.href = 'Detail.html';
+                });
+            </script>
+
             <div class="row">
                 <div class="artist-block">
                     <div class="view">
@@ -134,7 +142,7 @@
 
                 <div class="artist-block">
                     <div class="view">
-                        <img src="public/images/img_American_Gothic.png" alt="American Gothic" onclick="navigateToExplore3()">
+                        <img src="public/images/img_American_Gothic.png" alt="American Gothic" onclick="navigateToExplore9()">
                     </div>
                 </div>
 
@@ -145,6 +153,7 @@
                 </script>
 
             </div>
+
         </div>
     </div>
 </body>

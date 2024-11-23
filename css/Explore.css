@@ -268,6 +268,26 @@ footer {
 footer p {
     font-style: italic;
 }
+
+.toggle-button {
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+
 @font-face {
     font-family: 'Prata'; 
     src: url('../public/fonts/Prata-Regular.ttf') format('truetype'); 
